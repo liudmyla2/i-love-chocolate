@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Chocolate</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: #402a23;
+            font-size: 35px;
+            border: 6px solid #a55233;
+            border-radius: 7px;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+            color: #402a23;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 0px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        
+        p {
+            font-size: 20px;
+            color: #402a23;
+        }
+
+        ul {
+            margin-bottom: 0;
+        }
+
+        li {
+            font-size: 20px;
+            color: #402a23;
+            list-style-type: chocolate;
+        }
+        
+        @counter-style chocolate {
+            system: cyclic;
+            symbols: "\1F36B";
+            suffix: " ";
+        }
+
+        a {
+            color: #a55233;
+            text-decoration: none;
+        }
+
+        hr {
+            border: 3px solid #a55233;
+            border-radius: 3px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            background: #402a23;
+            color: white;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.2);
+            transition: all 200ms ease-in-out;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            cursor: pointer;
+        }
+
+        .learn-more {
+            display: block;
+            margin: 20px 0px;
+            text-decoration: none;
+        }
+
+        .learn-more:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .author {
+            text-decoration: none;
+        }
+
+        .author:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 60px;
+            border: 15px double #402a23;
+            border-radius: 30px;
+            margin: 40px auto;
+            background-color: beige;
+        }
+
+        body {
+            background-color: rgb(33, 26, 26);
+            background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/922/original/858084.jpg?1681911886);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>
+        Health Benefits of Chocolate
+    </h1>
+    <h2>
+        &#127851 Dark Chocolate &#127851
+    </h2>
+    <hr>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/077/891/original/darkChocolate.jpg?1681903165">
+    <hr>
+    <p>
+        <strong>Dark chocolate</strong> is rich in disease-fighting antioxidants. Studies show it can help reduce blood pressure and lower the
+        risk of heart disease. Studies show that dark chocolate — when it is not loaded with sugar and saturated fat — is indeed
+        a heart-healthy chocolate treat and more.
+    </p>
+    <p>
+        Top 5 health benefits of dark chocolate:
+    </p>
+        <ul>
+            <li>
+                It contains minerals like magnesium, iron and zinc.
+            </li>
+            <li>
+                It's rich in protective antioxidants.
+            </li>
+            <li>
+                Flavanols in dark chocolate reduce heart disease risk.
+            </li>
+            <li>
+                Eating moderate amounts of high-cocoa dark chocolate may improve brain function.
+            </li>
+            <li>
+                As it's rich in polyphenols, it may promote good bacteria in the gut.
+            </li>
+        </ul>
+        <br>
+        <hr>
+        <a href="https://en.wikipedia.org/wiki/Dark_chocolate"
+        target="_blank" class="learn-more">Learn more on Wikipedia</a>
+    <br>
+    <button class="buy-button">
+        👉 Buy the Best Dark Chocolate
+    </button>
+    <br>
+    <p class="footer">This page was built by <a href="https://www.linkedin.com/in/liudmyla-kostiuk-5156ab42/" target="_blank" class="author"><em>Liudmyla Kostiuk</em></a></p>
+    </div>
+    <script>
+        function buy() {
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email address?");
+            let age = prompt("How old are you?")
+
+            if (age < 18) {
+                alert("Sorry, " + name + ", you can't order the dark chocolate 😢.")
+            } else {
+                alert("Thank you, " + name + "! We'll get in touch with you by email 👌.")
+            }
+        }
+        let buyButton = document.querySelector(".buy-button");
+        buyButton.addEventListener("click", buy)
+    </script>
+</body>
+</html>
